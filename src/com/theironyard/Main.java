@@ -36,5 +36,17 @@ public class Main {
                     return "";
                 }
         );
+        Spark.post(
+                "/logout",
+                (request, response) -> {
+                    user = null;
+                    response.redirect("/");
+                    return "";
+                }
+        );
+
+
     }
+
+
 }
